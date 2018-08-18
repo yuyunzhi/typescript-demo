@@ -12,5 +12,16 @@
   "devDependencies": {
     "ts-node": "^7.0.1",
     "typescript": "^3.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuyunzhi/typescript-demo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yuyunzhi/typescript-demo/issues"
+  },
+  "homepage": "https://github.com/yuyunzhi/typescript-demo#readme",
+  "dependencies": {
+    "@types/node": "^10.7.1"
   }
 }
