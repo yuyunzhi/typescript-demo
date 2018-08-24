@@ -12,10 +12,12 @@
         if (a.gender !== b.gender) {
             return [a, b];
         } else {
-            throw new Error('性别相同不能结婚');
+            throw new Error('xxx');
         }
     }   
+    
     let a = { gender: Gender.Male };
     let b = { gender: Gender.Female };
     console.log(merry(a, b));
+
 }
