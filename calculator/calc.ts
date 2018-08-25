@@ -4,6 +4,7 @@
         public n2: string = '';
         public result: string = '';
         public operator: string = '';
+        public equal:boolean=true;
         public container:HTMLDivElement
         public span: HTMLSpanElement;
         public textLists: Array<Array<string | number>> = [
@@ -72,12 +73,18 @@
                     }
                     this.operator = text;
                   } else if ('='.indexOf(text) >= 0) {
-                    this.result = this.removeZero(this.getResult(this.n1, this.n2, this.operator));
-                    console.log(this.result)
-                    this.span.textContent = this.result;
-                    this.n1 = '';
-                    this.n2 = '';
-                    this.operator = '';
+                    if(this.result){
+                        
+                    }else{
+                      this.result = this.removeZero(this.getResult(this.n1, this.n2, this.operator));
+                      console.log(this.result)
+                      this.span.textContent = this.result;
+                      this.n1 = '';
+                      this.n2 = '';
+                      this.operator = '';
+                      this.equal=false;
+                    }
+
                   } else if (text === 'Clear') {
                     this.n1 = '';
                     this.n2 = '';
