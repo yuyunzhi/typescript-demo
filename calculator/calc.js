@@ -5,8 +5,9 @@
             this.n2 = '';
             this.result = '';
             this.operator = '';
+            this.equal = true;
             this.textLists = [
-                ['Clear', '÷'],
+                ['c', '÷'],
                 [7, 8, 9, '×'],
                 [4, 5, 6, '-'],
                 [1, 2, 3, '+'],
@@ -74,14 +75,20 @@
                         _this.operator = text;
                     }
                     else if ('='.indexOf(text) >= 0) {
-                        _this.result = _this.removeZero(_this.getResult(_this.n1, _this.n2, _this.operator));
-                        console.log(_this.result);
-                        _this.span.textContent = _this.result;
-                        _this.n1 = '';
-                        _this.n2 = '';
-                        _this.operator = '';
+                        if (_this.result) {
+                            //
+                        }
+                        else {
+                            _this.result = _this.removeZero(_this.getResult(_this.n1, _this.n2, _this.operator));
+                            console.log(_this.result);
+                            _this.span.textContent = _this.result;
+                            _this.n1 = '';
+                            _this.n2 = '';
+                            _this.operator = '';
+                            _this.equal = false;
+                        }
                     }
-                    else if (text === 'Clear') {
+                    else if (text === 'c') {
                         _this.n1 = '';
                         _this.n2 = '';
                         _this.operator = '';

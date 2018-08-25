@@ -5,10 +5,10 @@
         public result: string = '';
         public operator: string = '';
         public equal:boolean=true;
-        public container:HTMLDivElement
+        public container:HTMLDivElement;
         public span: HTMLSpanElement;
         public textLists: Array<Array<string | number>> = [
-            ['Clear', '÷'],
+            ['c', '÷'],
             [7, 8, 9, '×'],
             [4, 5, 6, '-'],
             [1, 2, 3, '+'],
@@ -74,7 +74,7 @@
                     this.operator = text;
                   } else if ('='.indexOf(text) >= 0) {
                     if(this.result){
-                        
+                        //
                     }else{
                       this.result = this.removeZero(this.getResult(this.n1, this.n2, this.operator));
                       console.log(this.result)
@@ -84,8 +84,7 @@
                       this.operator = '';
                       this.equal=false;
                     }
-
-                  } else if (text === 'Clear') {
+                  } else if (text === 'c') {
                     this.n1 = '';
                     this.n2 = '';
                     this.operator = '';

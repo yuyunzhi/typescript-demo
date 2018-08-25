@@ -1,26 +1,46 @@
 .calc {
     display: inline-block;
     font-weight:500;
+    padding:15px;
+    background:rgb(136,193,255)
+  }
+  button{
+    outline-style: none;
   }
   .calc button {
-    width: 6em;
-    height: 6em;
+    width:60px;;
+    height: 60px;
     font-weight:500;
+    font-size: 25px;
+    background:rgb(239,239,239);
+    border:1px solid rgb(239,239,239);
+    margin:5px;
+    border-radius:8px;
+    color:black;
   }
-  .calc button.text-Clear {
-    width: 18em;
+  .calc button.text-c {
+    width: 200px;
   }
   .calc button.text-0 {
-    width: 12em;
+    width: 130px;
   }
   .calc .output {
-    height: 6em;
-    border: 1px solid grey;
+    height: 120px;
     position: relative;
   }
   .calc .output > span {
     position: absolute;
-    bottom: 0;
-    right: 0.2em;
-    font-size: 1.5em;
+    bottom: 15px;
+    right: 15px;
+    font-size: 35px;
+    color:white;
+    font-weight:500;
+  }
+
+  .calc .row:nth-chid(5) button:nth-child(3){
+    background:rgb(63,255,186)
+  } 
+
+  button:active{
+    color:red;
   }
