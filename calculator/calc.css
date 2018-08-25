@@ -1,0 +1,26 @@
+.calc {
+    display: inline-block;
+    font-weight:500;
+  }
+  .calc button {
+    width: 6em;
+    height: 6em;
+    font-weight:500;
+  }
+  .calc button.text-Clear {
+    width: 18em;
+  }
+  .calc button.text-0 {
+    width: 12em;
+  }
+  .calc .output {
+    height: 6em;
+    border: 1px solid grey;
+    position: relative;
+  }
+  .calc .output > span {
+    position: absolute;
+    bottom: 0;
+    right: 0.2em;
+    font-size: 1.5em;
+  }
